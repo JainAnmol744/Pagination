@@ -21,9 +21,16 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    
   }
   
   .pagenumbers li button:hover {
     background-color: grey;
     color: white;
+  }
+
+  .pagenumbers input{
+    width: 40px;
+    border: 1px solid black;
+    padding: 8px 10px;
   }

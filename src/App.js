@@ -26,10 +26,14 @@ function App() {
  
   return (
     <div className="App">
+      <h1>React-pagination Demo</h1>
       {
         currentItems.length>0  && currentItems.map((item, key)=>{
           return(
-            <li key={key}>{item.title}</li>
+            <div className='card' key={key}>
+            <div ><b>Title :-</b> {item.title}</div>
+            <div><b>Description :-</b> {item.body}</div>
+            </div>
           )
         })
       }

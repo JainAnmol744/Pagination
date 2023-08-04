@@ -10,12 +10,12 @@ const Pagination = ({ data, setcurrentItems }) => {
 
   const pages = [];
 
-  for (let i = 1; i <= Math.ceil(data.length / 10); i++) {
+  for (let i = 1; i <= Math.ceil(data.length / 3); i++) {
     pages.push(i);
   }
   console.log(pages);
-  const indexOfLastItem = page * 10;
-  const indexofFirstItem = indexOfLastItem - 10;
+  const indexOfLastItem = page * 3;
+  const indexofFirstItem = indexOfLastItem - 3;
 
   useEffect(() => {
     // Update the currentItems whenever the page changes or the data array changes
@@ -46,7 +46,7 @@ const Pagination = ({ data, setcurrentItems }) => {
 
   return (
     <ul className="pagenumbers"> Total Pages {pages.length}
-      <li>
+      <li style={{marginLeft:"10px"}}>
         <button onClick={handleprevbtn} disabled={page === 1 ? true : false}>
           Previous
         </button>
@@ -67,11 +67,12 @@ const Pagination = ({ data, setcurrentItems }) => {
           return null;
         }
       })}
-      <li>
+      <li style={{marginRight:"10px"}}>
         <button onClick={handlenextbtn} disabled={page === pages.length ? true : false}>
           Next
         </button>
       </li>
+      <span>Go To :-</span><input type='text' placeholder='Go To' value={page} onChange={(e)=> setpage(e.target.value)}/>
     </ul>
   );
 };
