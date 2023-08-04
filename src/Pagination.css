@@ -1,0 +1,29 @@
+.pagenumbers{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagenumbers li{
+    padding: 5px 10px;
+
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .pagenumbers li.active{
+    background-color: grey;
+    color: white;
+  }
+  
+  .pagenumbers li button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .pagenumbers li button:hover {
+    background-color: grey;
+    color: white;
+  }
